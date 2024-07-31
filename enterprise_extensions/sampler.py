@@ -1165,7 +1165,7 @@ def setup_sampler(pta, outdir='chains', resume=False,
         sampler.addProposalToCycle(jp.draw_from_empirical_distr, 10)
 
     # Red noise prior draw
-    if 'red noise' in jp.snames:
+    if 'red noise' in jp.snames and len(jp.snames['red noise']) != 0:
         print('Adding red noise prior draws...\n')
         sampler.addProposalToCycle(jp.draw_from_red_prior, 10)
 
